@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Multiple Choice Test Game</title>
+    <style>
+      /* Sets some parameters for the styling to follow */
+
+      body {
+        background-color: black;
+      }
+      h1 {
+        text-align: center;
+      }
+      .question {
+        margin-bottom: 20px;
+      }
+      .options label {
+        display: block;
+        margin-bottom: 10px;
+      }
+      .result {
+        font-weight: bold;
+        margin-top: 20px;
+      }
+      .submit-button {
+        display: block;
+        margin-top: 20px;
+      }
+
+      .animate-charcter
+        {
+        text-transform: uppercase;
+        background-image: linear-gradient(
+        -225deg,
+        #231557 0%,
+        #44107a 29%,
+        #ff1361 67%,
+        #fff800 100%
+        );
+        background-size: auto auto;
+        background-clip: border-box;
+        background-size: 200% auto;
+        color: #fff;
+        background-clip: text;
+        text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: textclip 2s linear infinite;
+        display: inline-block;
+            font-size: 170px;
+        }
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+    .dropdown {
+            position: relative;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .dropdown-button {
+            font-size: 18px;
+            padding: 12px 16px;
+            background-color: #f1f1f1;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            min-width: 160px;
+            z-index: 1;
+            text-align: left;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: lightblue;
+        }
+
+        .dropdown:hover .dropdown-button {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            background-color: #f9f9f9;
+        }
+    </style>
+  </head>
+  <body>
+
+    <div class="dropdown">
+        <button class="dropdown-button">Menu &#9662;</button>
+        <div class="dropdown-content">
+            <!-- Here we indivicually refernece each file which we will be directed to if the user presses the button -->
+            <a href="index.html">Introduction</a>
+            <a href="unsdg9.html">UNSDG 9</a>
+            <a href="unsdg11.html">UNSDG 11</a>
+            <a href="similar.html">How They Are Similar</a>
+            <a href="help.html">How You Can Help</a>
+            <a href="Game.html">Game</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center"><center>
+            <h3 class="animate-charcter">Game</h3>
+          </div></center>
+        </div>
+      </div>
+
+    <h2><font color="white">
+        Welcome to the Game
+    </h2>
+
+    <!-- Under the div quiz, you can see that we have our questions -->
+    <div id="quiz">
+      <!-- We create another div named question, which we can fetch later on -->
+      <div class="question" data-solution="a">
+        <!-- Creates the first question, with different options for the answers -->
+        <p>1. What is UNSDG 9?</p>
+        <div class="options">
+          <!-- Type radio is basically saying that the user ocan only pick one option -->
+          <label><input type="radio" name="q1" value="a" /> a) Building resilient infrastrucutre, promoting inclusive and sustainable industrialization</label>
+          <label><input type="radio" name="q1" value="b" /> b) Making cities and human settlements incluisve, safe, resilient, and sustainable</label>
+          <label><input type="radio" name="q1" value="c" /> c) I don't really know</label>
+        </div>
+      </div>
+
+      <div class="question" data-solution="b">
+        <!-- Creates the second question -->
+        <p>2. What is UNSDG 11?</p>
+        <div class="options">
+          <label><input type="radio" name="q2" value="a" /> a) Building resilient infrastrucutre, promoting inclusive and sustainable industrialization</label>
+          <label><input type="radio" name="q2" value="b" /> b) Making cities and human settlements incluisve, safe, resilient, and sustainable</label>
+          <label><input type="radio" name="q2" value="c" /> c) All of the above</label>
+        </div>
+      </div>
+
+      <div class="question" data-solution="a">
+        <!-- Creates the third question -->
+        <p>3. What is one of the similarities between the two SDGs?</p>
+        <div class="options">
+          <label
+            ><input type="radio" name="q3" value="a" /> a) In order for them to be achived, similar criterion need to be considered (e.g. sustainability)</label
+          >
+          <label
+            ><input type="radio" name="q3" value="b" /> b) They aren't similar</label
+          >
+          <label
+            ><input type="radio" name="q3" value="c" /> c) I don't know</label
+          >
+        </div>
+      </div>
+
+      <div class="question" data-solution="a">
+        <!-- Creates the fourth question -->
+        <p>4. How many SDG goals are there?</p>
+        <div class="options">
+          <label>
+            <input type="radio" name="q4" value="a" /> a) 17
+          </label>
+          <label><input type="radio" name="q4" value="b" /> b) 4</label>
+          <label
+            ><input type="radio" name="q4" value="c" /> c) 16</label
+          >
+        </div>
+      </div>
+
+      <!-- Creates the fifth question -->
+      <div class="question" data-solution="c">
+        <p>5. How can you help these SDGs be implemented?</p>
+        <div class="options">
+          <label
+            ><input type="radio" name="q5" value="a" /> a) Recycle, Reuse, and Recycle</label
+          >
+          <label
+            ><input type="radio" name="q5" value="b" /> b) Join an organization</label
+          >
+          <label
+            ><input type="radio" name="q5" value="c" /> c) All of the above </label
+          >
+        </div>
+      </div>
+
+      <!-- Creates a submit button which the user can press to check their answers -->
+      <button class="submit-button" onclick="checkAnswers()">Submit</button>
+    </div>
+
+    <div id="result" style="display: none">
+      <h2>Result</h2>
+      <!-- Here id=score serves as a placeholder, when we find out the score later on in the code -->
+      <!-- This will be called later on in the code -->
+      <div id="score"></div>
+    </div>
+
+    <!-- Utilizes some Javascript code to check the ansewrs -->
+    <script>
+      // Creates function called checkAnswers
+      function checkAnswers() {
+        // Here we are fetching the "quiz" div, and assigning a variable to it
+        let quiz = document.getElementById("quiz");
+        // We do the same thing here, which is fetching the "result" div and then assigning a variable to it
+        let result = document.getElementById("result");
+        // Creates a variable named score which obviously keeps track of the score
+        var score = 0;
+
+        // Creates a variable named questions, and stores the questions from the variable quiz inside questions
+        var questions = quiz.getElementsByClassName("question");
+
+        // Creates a loop to go through the questions one by one
+        for (let i = 0; i < questions.length; i++) {
+          let question = questions[i];
+
+          // Checks if the selected option which the user put mathces with the value which we set for the answer
+          // We store the user's answer into the selectedOption variable
+          const selectedOption = question.querySelector("input:checked").value;
+
+          // Check if the selectedOption variable mathes the data-solution which we assigned in each question,
+          //   which contains the answer
+          if (selectedOption === question.getAttribute("data-solution")) {
+            score++;
+            // Makes the question green if the answer is correct
+            question.style.color = "green";
+          } else {
+            // Makes the question red if the answer is wrong
+            question.style.color = "red";
+          }
+        }
+
+        // Displays the result
+        // This finds the empty score div from earlier, and assigns a value to it.
+        document.getElementById("score").innerHTML =
+          // Creates a string which tells the user their score out of 5
+          "You scored " + score + " out of " + 5;
+        result.style.display = "block";
+      }
+    </script>
+  </body>
+</html>
